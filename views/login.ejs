@@ -1,27 +1,31 @@
 <link rel="stylesheet" type="text/css" href="/css/login.css">
-<% include partials/header %>
-	
-	 <h1 class="text-center">Login</h1> 
+<!-- <% include partials/header %> -->
 
-	<div class=container-fluid >
-		<div class="row" id="login">
-			<div class="col-md-3 col-lg-3"></div>
-				<div class="col-md-6 col-sm-12 col-lg-6" id = "loginbox">
-					<form action="/authenticate" method="POST">
-					  <div class="form-group">
-					    <label>Username</label>
-					    <input type="text" class="form-control"  name="username" placeholder="Enter username">
-					  </div>
-					  <div class="form-group">
-					    <label>Password</label>
-					    <input type="password" name="password" class="form-control" placeholder="Password">
-					  </div>
-					  <div align="center"><button type="submit" class="btn btn-dark">LOGIN</button></div>
-					</form>
-				</div>
-			<div class="col-md-3 col-lg-3"></div>
-		</div>
-	</div>
+<div class="login-screen">
+  <div class="left-item">
+    <div class="login-panel">
+      <div class="inner-login-panel">
+        <div class="content-panel">
+          <h3 class="title">Log In</h3>
+          <form action="/authenticate" method="POST">
+            <input type="text" placeholder="USERNAME" class="form-group" name="username"/>
+            <input type="password" placeholder="PASSWORD" name="password"/>
+            <button type="submit" value="Let's Go">Let's Go</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-item">
+    <div class="slider-panel">
+      <div class="inner-slider-panel">
+        <h1>RocketShare</h1>
+        <p>Sign in to acess your account.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-<% include partials/footer %>
+<!-- <% include partials/footer %> -->
