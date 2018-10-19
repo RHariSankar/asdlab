@@ -22,11 +22,12 @@
 
 
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700");
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 body {
   position: relative;
   height: 100vh;
-  background-color: #51326a;
+  background-color: #502d6d;
   margin: 0;
   font-family: "Josefin Sans", sans-serif;
 }
@@ -75,7 +76,7 @@ body {
   width: 60%;
   border-bottom-right-radius: 7px;
   border-top-right-radius: 7px;
-  background-image: url(https://images.pexels.com/photos/461064/pexels-photo-461064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-image: url(http://kit8.net/images/detailed/3/beach_6p4q-07.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -92,10 +93,10 @@ body {
 
   content: "";
 
-  opacity: 0.8;
+  opacity: 0.7;
   border-bottom-right-radius: 7px;
   border-top-right-radius: 7px;
-  background-image: -moz-linear-gradient(45deg, #51326a 0%, #c24581 100%);
+  background-image: -moz-linear-gradient(45deg, #ba8be0 0%, #c24581 100%);
   background-image: -webkit-linear-gradient(45deg, #51326a 0%, #c24581 100%);
   background-image: -ms-linear-gradient(45deg, #51326a 0%, #c24581 100%);
 }
@@ -131,7 +132,7 @@ body {
   width: 100%;
   padding: 6px 0;
   color: #51326a;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 500;
 }
 
@@ -150,7 +151,7 @@ body {
   border: 0;
   outline: none;
   color: #fff;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   padding: 12px 15px;
   font-weight: 500;
   border-radius: 2px;
@@ -159,6 +160,22 @@ body {
   box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
+
+
+.login-screen .right-item .inner-slider-panel button {
+    background-color: #ff022c;
+    border: 0;
+    outline: none;
+    color: #fff;
+    /* text-transform: uppercase; */
+    padding: 12px 15px;
+    font-weight: 500;
+    border-radius: 2px;
+    width: 40%;
+    margin-top: 0px;
+    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
 
 .login-screen .right-item .slider-panel {
   display: table;
@@ -175,12 +192,12 @@ body {
 
 .login-screen .right-item .slider-panel .inner-slider-panel h1 {
   margin: 0 0 7px 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .login-screen .right-item .slider-panel .inner-slider-panel p {
   margin: 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 13px;
   opacity: 0.7;
 }
@@ -199,6 +216,7 @@ body {
     margin: -225px 0 0 -150px;
   }
   .login-screen .right-item {
+    
     display: none;
   }
   .login-screen .left-item {
