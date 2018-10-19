@@ -1,0 +1,29 @@
+#signup{
+    margin-top:20px;
+    margin-right:5px; 
+    margin-left:5px;
+      
+}
+
+#intro{
+	margin-top:10px;
+	text-align: justify;
+	font-size:20px;
+}
+
+#databox{
+	font-size: 17px;
+    margin-top:10px; 
+    margin-bottom:10px; 
+    border-style: solid;
+    border-width: 1.5px;
+    border-radius: 2%;
+    /* border:5px; */
+    padding: 20px;
+}
+@media (min-width: 800px) {
+  /* CSS that should be displayed if width is equal to or less than 800px goes here */
+  #intro{
+  	padding-top: 25vh;
+  }
+}

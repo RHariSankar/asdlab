@@ -1,0 +1,21 @@
+#login{
+	 margin-top:20px;
+    margin-right:5px; 
+    margin-left:5px;
+}
+#loginbox{
+	font-size: 17px;
+    margin-top:25vh; 
+    margin-bottom:10px; 
+    border-style: solid;
+    border-width: 1.5px;
+    border-radius: 1%;
+    /* border:5px; */
+    padding: 20px;
+}
+/*@media (min-width: 800px) {
+   CSS that should be displayed if width is equal to or less than 800px goes here 
+  #loginbox{
+  	margin-top: 12.5vh;
+  }
+}*/
