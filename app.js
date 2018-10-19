@@ -29,7 +29,6 @@ const sequelize = new Sequelize(db_config.name, db_config.user, db_config.pass, 
 
 const User=require('./app/models/users')(sequelize,sequelize.DataTypes)
 
-
  module.exports =sequelize;
 sequelize.authenticate().then(() => {
     console.log('Connection has been established successfully.');
