@@ -6,6 +6,10 @@ const express = require('express'),
 
 	  const User = sequelize.import('../models/users');
 
+ //Landing page
+router.get('/',async function(req,res){
+  res.render('landing');
+})  
 // Login Page
 router.get('/login',async function(req, res){
 	res.render('login');
