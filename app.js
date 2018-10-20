@@ -28,6 +28,7 @@ const sequelize = new Sequelize(db_config.name, db_config.user, db_config.pass, 
 });
 
 const User=require('./app/models/users')(sequelize,sequelize.DataTypes)
+const Post=require('./app/models/posts')(sequelize,sequelize.DataTypes)
 
  module.exports =sequelize;
 sequelize.authenticate().then(() => {
@@ -42,13 +43,10 @@ sequelize.sync();
 
 
 app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"));
-app.use(methodOverride('_method'));
-//app.use(flash());
-
 
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(session({ secret: 'secret',resave:true,saveUninitialized:true }));
 
 //passport-js config

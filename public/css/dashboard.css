@@ -37,7 +37,7 @@ body {
     background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
   }
   .demo-card-wide > .mdl-card__menu {
-    color: #fff;
+    color: rgb(12, 12, 12);
   }
   
   .cards {
