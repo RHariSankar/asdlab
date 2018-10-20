@@ -1,4 +1,6 @@
-body {background-color: #291733;}
+body {
+  background-color  : #331045
+}
 
 .fab {
     width: 70px;
@@ -23,3 +25,47 @@ body {background-color: #291733;}
     box-shadow: 0 6px 14px 0 #666;
     transform: scale(1.05);
  }
+
+ .demo-card-wide.mdl-card {
+    width: 260vh;
+    max-width: 102vh; 
+    border-radius: 1%;
+    min-height: 11vh;
+  }
+  .demo-card-wide > .mdl-card__title {
+    color: #fff;
+    background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+  }
+  .demo-card-wide > .mdl-card__menu {
+    color: #fff;
+  }
+  
+  .cards {
+    padding: 25px;
+    background: #fafafa;
+    position: relative;
+  }
+    
+   #like{
+    margin-left:20px;
+  
+  }
+  #comment{
+    margin-left:20px;
+  }
+  #share{
+    margin-left:20px;
+  }
+  
+  .mdl-card__actions > .mdl-card--border{
+    margin-top: -20px;
+  }
+  #chip{
+    padding-right:30px;
+    margin-left:600px;
+
+  }
+  .cards{
+    margin-top: 14ch;
+background-color: #331045;
+  }
