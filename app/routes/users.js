@@ -63,13 +63,14 @@ router.get('/logout', function(req, res){
 
 
 //dashboard page
-router.get('/dashboard',isLoggedIn,(req,res)=>{
+router.get('/dashboard',isLoggedIn,async(req,res)=>{
 Post.findAll({
+		raw:true,
 		attributes:['post_id','user_id','title','idea','like_count']
 	}).then(function(post){
 		console.log(post)
+		res.render('dashboard',{docs:post})
 	});
-	res.render('dashboard');
 })
 
 //profile page
