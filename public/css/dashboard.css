@@ -36,6 +36,7 @@ body {
     color: #fff;
     background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
   }
+  
   .demo-card-wide > .mdl-card__menu {
     color: rgb(12, 12, 12);
   }
@@ -50,8 +51,13 @@ body {
     margin-left:20px;
   
   }
+
+  #like_form{
+    margin-right: 96vh;
+    margin-bottom: -31px;
+  }
   #comment{
-    margin-left:20px;
+    margin-left:40px;
   }
   #share{
     margin-left:20px;
@@ -68,4 +74,8 @@ body {
   .cards{
     margin-top: 14ch;
 background-color: #331045;
+  }
+
+  #post_card{
+    margin-top: 15px;
   }

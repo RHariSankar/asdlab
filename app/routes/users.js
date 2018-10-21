@@ -73,13 +73,27 @@ Post.findAll({
 	});
 })
 
+router.post('/addlike',isLoggedIn,async(req,res)=>{
+	console.log(req.body.pid)
+	Post.findById(req.body.pid).then(post=>{
+		return post.increment('like_count',{by:1})
+	})
+res.redirect('/dashboard')
+})
 //profile page
 router.get('/profile',isLoggedIn,(req,res)=>{
 	res.render('profile');
 })
 
+//coment page for each post
+router.get('/commentpage',isLoggedIn,(req,res)=>{
+	res.render('comments')
+})
 
-
+//adding comments to db
+router.post('/addcomment',isLoggedIn,(req,res)=>{
+	
+})
 
 function isLoggedIn(req, res, next) {
 	if(req.isAuthenticated()){

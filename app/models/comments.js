@@ -13,8 +13,8 @@ module.exports=function(sequelize,DataTypes){
       type: Sequelize.INTEGER,
       allowNull:false
     },
-    description:{
-        type: Sequelize.STRING(500),
+    content:{
+        type: Sequelize.STRING(1000),
         allowNull: false
     },
     post_id:{

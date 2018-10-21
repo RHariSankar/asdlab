@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="/css/comments.css">
+<link rel="stylesheet" href="/css/bootstrap.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-amber.min.css" /> 
+
+
+<body style="background-color: #331045";"> 
+<% include partials/navbar %>
+
+      <div class="cards" align='center'>
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp" id="post_card">
+          <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text"></h4>
+            
+  
+          </div>
+          <div class="mdl-card__supporting-text">
+          
+
+          </div>
+          <div class="mdl-card__menu">
+        <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="">favorite</div>
+            
+        </div>
+          
+          <div class="mdl-card__actions mdl-card--border" style="margin-bottom:2px;" >
+            <form   action="/addlike" method="post" id="like_form">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="like" name="pid" value="" >
+              <i class="material-icons" style="font-size:28px">favorite</i>
+            </button></form>
+             <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="comment">
+              <i class="material-icons style="font-size:35px"" >textsms</i>
+            </button>
+             <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="share">
+              <i class="material-icons" style="font-size:27px">rss_feed</i>
+            </button>
+
+            <span class="mdl-chip mdl-chip--contact" id="chip">
+                <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">H</span>
+                <span class="mdl-chip__text">Contact Chip</span>
+            </span>
+        
+    
+          </div>
+        
+        </div>
+    </div>
+
+
+
+    <!-- comment section -->
+
+    
+	<div class="comments-container">
+		
+
+            <ul id="comments-list" class="comments-list">
+                <li>
+                    <div class="comment-main-level">
+                        
+                        <div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""></div>
+                        
+                        <div class="comment-box">
+                            <div class="comment-head">
+                                <h6 class="comment-name by-author"><a href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
+                                <span>hace 20 minutos</span>
+                                <i class="fa fa-reply"></i>
+                                <i class="fa fa-heart"></i>
+                            </div>
+                            <div class="comment-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                    
+            </div>
+         
+
+            <div class="comments-container">
+		
+
+                 <ul id="comments-list" class="comments-list">
+                        <li>
+                            <div class="comment-main-level">
+                                
+                                <div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""></div>
+                                
+                                <div class="comment-box">
+                                    <div class="comment-head">
+                                        <h6 class="comment-name by-author"><a href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
+                                        <span>hace 20 minutos</span>
+                                        <i class="fa fa-reply"></i>
+                                        <i class="fa fa-heart"></i>
+                                    </div>
+                                    <div class="comment-content" style="min-height:130px;">
+                                                                <!-- Simple Textfield -->
+                                                        <form action="/addcomment" method="POST">
+                                                                <div class="mdl-textfield mdl-js-textfield" style="width: 464px; height: 53px;" >
+                                                                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="commentbox"  name="content"></textarea>
+                                                                        <label class="mdl-textfield__label" for="sample5">Enter Comment.....</label>
+                                                         
+                                                         <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"  type ="'submit" style="margin-left: 58vh;  margin-bottom: -5vh;">
+                                                                <i class="material-icons">forward</i>
+                                                              </button>
+                                                            </div>
+                                                        </form>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            
+                    </div>
+    
+
+    <a href="http://localhost:8080/feedpost"><div class="fab">+</div></a>
+
+</body>
+<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="/js/bootstrap.min.js"></script> 
+</html>
