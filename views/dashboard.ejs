@@ -21,9 +21,10 @@
 
           </div>
           <div class="mdl-card__menu">
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" >
+
+              <a href="http://localhost:8080/commentpage/<%= docs[i].post_id %>"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" >
                   View
-                </button>
+                </button></a>
         <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="<%= docs[i].like_count %>">favorite</div>
             
         </div>
@@ -42,7 +43,7 @@
 
             <span class="mdl-chip mdl-chip--contact" id="chip">
                 <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">H</span>
-                <span class="mdl-chip__text">Contact Chip</span>
+                <span class="mdl-chip__text">Contact</span>
             </span>
         
     

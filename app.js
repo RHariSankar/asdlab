@@ -4,9 +4,7 @@ const express = require("express"),
 	bodyParser = require('body-parser'),
   passport=require('passport'),
   session=require('express-session'),
-  cookieParser=require('cookie-parser'),
-  bcrypt =require('bcrypt');
-
+  cookieParser=require('cookie-parser');
 
 require('dotenv').config();
 const db_config =require('./config/database');
@@ -27,8 +25,16 @@ const sequelize = new Sequelize(db_config.name, db_config.user, db_config.pass, 
   },
 });
 
-const User=require('./app/models/users')(sequelize,sequelize.DataTypes)
-const Post=require('./app/models/posts')(sequelize,sequelize.DataTypes)
+const User=require('./app/models/users')(sequelize,sequelize.DataTypes);
+const Post=require('./app/models/posts')(sequelize,sequelize.DataTypes);
+const comment= require('./app/models/comments')(sequelize,sequelize.DataTypes);
+
+//creating associations
+Post.belongsTo(User,{ foreignKey: 'user_id' , foreignKeyConstraint:true , targetKey:'user_id'});
+// comment.belongsTo(Post,{ foreignKey:'post_id', foreignKeyConstraint: true, targetKey:'post_id'});
+comment.belongsTo(User,{ foreignKey:'user_id', foreignKeyConstraint: true, targetKey:'username'});
+
+
 
  module.exports =sequelize;
 sequelize.authenticate().then(() => {

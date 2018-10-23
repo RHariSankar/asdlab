@@ -1,6 +1,7 @@
 const Sequelize =require('sequelize');
 const DataTypes=Sequelize.DataTypes;
 
+
 module.exports=function(sequelize,DataTypes){
   const Post = sequelize.define('post', {
     post_id: {
@@ -26,27 +27,13 @@ module.exports=function(sequelize,DataTypes){
         allowNull:true,
         default:0
     }
+  //   references: {
+  //     model: 'users', 
+  //     key: 'user_id', 
+  //  }
       
   });
 
-  Post.getPostById = function(id, callback) {
-    Post.findById(id).then(post => {
-      console.log(post);
-    });
-  }
-  
-  
-    Post.addLike =function(post,cnt,callback){
-        post.findById(id).on('success', function (post) {
-            if (post) {
-                post.updateAttributes({
-                like_count: cnt
-            }) .success(function () {
-                    console.log("liked!!!!!"+post.like_count)
-            })
-            }
-        })
-    }
 
  return  Post;
 

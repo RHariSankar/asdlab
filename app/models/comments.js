@@ -1,6 +1,7 @@
 const Sequelize =require('sequelize');
 const DataTypes=Sequelize.DataTypes;
 
+
 module.exports=function(sequelize,DataTypes){
   const Comment = sequelize.define('comment', {
     comm_id: {
