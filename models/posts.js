@@ -27,13 +27,18 @@ module.exports=function(sequelize,DataTypes){
         allowNull:true,
         default:0
     }
-  //   references: {
-  //     model: 'users', 
-  //     key: 'user_id', 
-  //  }
       
   });
 
+  Post.associate = function (models) {
+    models.Post.belongsTo(models.users, {
+      onDelete: 'CASCADE',
+      foreignKey: {
+        name: 'user_id',
+        allowNull: false
+      },
+    });
+};
 
  return  Post;
 

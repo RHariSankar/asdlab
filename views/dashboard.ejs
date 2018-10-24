@@ -34,17 +34,14 @@
               <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="like" name="pid" value="<%= docs[i].post_id %>" >
               <i class="material-icons" style="font-size:28px">favorite</i>
             </button></form>
-             <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="comment">
+            <a href="https://localhost:8080/commentpage/<%= docs[i].post_id %>"></a>
+             <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="comment" style="margin-left: -685px;">
               <i class="material-icons style="font-size:35px"" >textsms</i>
-            </button>
+            </button></a>
              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="share">
               <i class="material-icons" style="font-size:27px">rss_feed</i>
             </button>
 
-            <span class="mdl-chip mdl-chip--contact" id="chip">
-                <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">H</span>
-                <span class="mdl-chip__text">Contact</span>
-            </span>
         
     
           </div>

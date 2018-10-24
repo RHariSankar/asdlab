@@ -3,7 +3,7 @@ const DataTypes=Sequelize.DataTypes;
 
 
 module.exports=function(sequelize,DataTypes){
-  const Comment = sequelize.define('comment', {
+  const Comments = sequelize.define('comment', {
     comm_id: {
       type: Sequelize.INTEGER,
       allowNull:false,
@@ -25,7 +25,17 @@ module.exports=function(sequelize,DataTypes){
     
   });
 
- return Comment;
+  Comments.associate = function (models) {
+    models.comments.belongsTo(models.posts, {
+      onDelete: 'CASCADE',
+      foreignKey: {
+        name: 'post_id',
+        allowNull: false
+      },
+    });
+};
+
+ return Comments;
 
 
  

@@ -1,6 +1,6 @@
 const express = require('express'),
 	  router = express.Router(),
-	  sequelize=require('../../app.js')
+	  sequelize=require('../app.js')
 	  passport = require('passport'),
 	  LocalStrategy=require('passport-local').Strategy;
 

@@ -25,14 +25,7 @@ const sequelize = new Sequelize(db_config.name, db_config.user, db_config.pass, 
   },
 });
 
-const User=require('./app/models/users')(sequelize,sequelize.DataTypes);
-const Post=require('./app/models/posts')(sequelize,sequelize.DataTypes);
-const comment= require('./app/models/comments')(sequelize,sequelize.DataTypes);
-
-//creating associations
-Post.belongsTo(User,{ foreignKey: 'user_id' , foreignKeyConstraint:true , targetKey:'user_id'});
-// comment.belongsTo(Post,{ foreignKey:'post_id', foreignKeyConstraint: true, targetKey:'post_id'});
-comment.belongsTo(User,{ foreignKey:'user_id', foreignKeyConstraint: true, targetKey:'username'});
+const User=require('./models/users')(sequelize,sequelize.DataTypes);
 
 
 
@@ -71,7 +64,7 @@ require('./config/auth')(passport,User);
 
 
 //Requiring Routes
-const router= require('./app/routes/users')
+const router= require('./routes/users')
 app.use(router);
 // app.use(indexRoutes);
 // app.use('/login',login);

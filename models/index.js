@@ -34,4 +34,9 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+// Import Models such that I can use them in the api just by importing 'db'
+db.users = require('./users')(sequelize, Sequelize);
+db.posts = require('./posts')(sequelize, Sequelize);
+db.users = require('./comments')(sequelize, Sequelize);
+
 module.exports = db;
